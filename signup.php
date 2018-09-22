@@ -33,20 +33,19 @@
       </div>
     </nav>
 
-      <form class="form-signin">
+      <form class="form-signin" method="POST" action="register.php">
         <img class="mb-4" src="./res/img/logo.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+        <label for="inputText" class="sr-only">Name</label>
+        <input type="text" id="inputText" name="name" class="form-control" placeholder="Enter Your Name" required autofocus>
+        <label for="inputNumber" class="sr-only">Mobile No.</label>
+        <input type="tel" id="inputNumber" name="mobile" class="form-control" placeholder="Mobile No. e.g:+923XXXXXXXXX" maxlength="13" pattern="^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$" required autofocus>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="name" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-        <!-- <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div> -->
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <a href="signup.php" class="btn btn-default">Don't have account | SignUp Here</a>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password (6-15 length)" minlength="6" maxlength="15" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button> 
+        <a href="signin.php" class="btn btn-default">Already Registered | Login Here</a>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
       </form>
 
