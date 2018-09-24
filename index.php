@@ -1,4 +1,9 @@
+<?php 
 
+if(isset($_COOKIE['uname'])){
+  header('Location: home.php');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,14 +35,19 @@
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
         </ul>
+        <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+            <li class="nav-item"><a class="nav-link" href="index.php">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.php">Register</a></li>
+        </ul>
       </div>
     </nav>
 
-      <form class="form-signin">
+      <form class="form-signin" method="POST" action="login.php">
         <img class="mb-4" src="./res/img/logo.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="name" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <!-- <div class="checkbox mb-3">

@@ -36,6 +36,17 @@
             <a class="nav-link" href="search.php">Search</a>
           </li>
         </ul>
+        <!-- Right Side Of Navbar -->
+        <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];}?> <span class="caret"></span></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">Dashboard</a>
+                            <a class="dropdown-item" href="logout.php">Logout</a>
+                </div>
+                </li>
+
+        </ul>
       </div>
     </nav>
 

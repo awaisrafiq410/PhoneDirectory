@@ -2,7 +2,7 @@
     session_start();
 
    require_once("connect.php");
-    $email = $_POST['name'];
+    $email = $_POST['email'];
     $pass = $_POST['password'];
     
     # Validate login credentials
@@ -14,13 +14,15 @@
     {
         if($data['password']==md5($pass))
         {
-            $_SESSION['uid']=$email;
-            header('Location: ..\home.php') or die(" Error ");
+            $_SESSION['uid']=$data['id'];
+            $_SESSION['uname']=$data['name'];
+            setcookie('uname', $data['name'], time() + (86400 * 30), "/"); // 86400 = 1 day
+            header('Location: home.php') or die(" Error ");
         }
         
     }
         $_SESSION['login_error']=true;
-        header("Location: ..\index.php") or die(" Error ");
+        header("Location: index.php") or die(" Error ");
     mysqli_close($con);
   
 
