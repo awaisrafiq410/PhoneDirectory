@@ -1,6 +1,6 @@
 <?php 
-
-if(isset($_COOKIE['uname'])){
+  session_start();
+if(isset($_SESSION['uid'])){
   header('Location: home.php');
 }
 ?>
@@ -43,7 +43,7 @@ if(isset($_COOKIE['uname'])){
       </div>
     </nav>
 
-      <form class="form-signin" method="POST" action="login.php">
+      <form class="form-signin" method="POST" action="php/login.php">
         <img class="mb-4" src="./res/img/logo.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Email address</label>

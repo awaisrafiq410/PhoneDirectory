@@ -12,12 +12,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./res/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="text-center">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <a class="navbar-brand" href="#">PhoneDirectory</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="create.php">Create</a>
@@ -39,10 +38,10 @@
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];}?> <span class="caret"></span></a>
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><?php session_start(); if(isset($_SESSION['uname'])){echo $_SESSION['uname'];}?> <span class="caret"></span></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Dashboard</a>
-                            <a class="dropdown-item" href="logout.php">Logout</a>
+                            <a class="dropdown-item" href="dashboard.php">Dashboard</a>
+                            <a class="dropdown-item" href="php/logout.php">Logout</a>
                 </div>
                 </li>
 

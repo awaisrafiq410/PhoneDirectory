@@ -33,7 +33,7 @@
       </div>
     </nav>
 
-      <form class="form-signin" method="POST" action="register.php">
+      <form class="form-signin" method="POST" action="php/register.php">
         <img class="mb-4" src="./res/img/logo.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
         <label for="inputText" class="sr-only">Name</label>
