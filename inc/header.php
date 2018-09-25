@@ -12,6 +12,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./res/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
   </head>

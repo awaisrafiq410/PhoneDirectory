@@ -1,4 +1,5 @@
 <?php 
+
     session_start();
 
     $_SESSION['success']="false";
@@ -8,8 +9,10 @@
     $fname =  trim(strip_tags($_POST['fname']));
     $lname =  trim(strip_tags($_POST['lname']));    
     $mobile =  trim(strip_tags($_POST['mobile']));
+    $cid =  trim(strip_tags($_POST['updatebtn']));    
     $uid=$_SESSION['uid'];
-    $query ="INSERT INTO contacts (cid, fname, lname,mobile, user_id) VALUES ('','$fname','$lname','$mobile','$uid')";
+
+    $query ="UPDATE contacts SET fname='$fname',lname='$lname',mobile='$mobile' WHERE user_id='$uid' AND cid='$cid'";
 
     if ($con->query($query) === TRUE) {
         header("Location: ../dashboard.php");
