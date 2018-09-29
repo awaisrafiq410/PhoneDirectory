@@ -9,10 +9,10 @@
     $fname =  trim(strip_tags($_POST['fname']));
     $lname =  trim(strip_tags($_POST['lname']));    
     $mobile =  trim(strip_tags($_POST['mobile']));
-    $cid =  trim(strip_tags($_POST['updatebtn']));    
+    list($cid,$pid) =  explode(":",$_POST['updatebtn']); 
     $uid=$_SESSION['uid'];
 
-    $query ="UPDATE contacts SET fname='$fname',lname='$lname',mobile='$mobile' WHERE user_id='$uid' AND cid='$cid'";
+    $query ="UPDATE contacts,numbers SET contacts.fname='$fname',contacts.lname='$lname',numbers.mobile='$mobile' WHERE user_id='$uid' AND contacts.cid='$cid' AND numbers.pid='$pid'";
 
     if ($con->query($query) === TRUE) {
         header("Location: ../dashboard.php");
