@@ -15,6 +15,7 @@
         if($data['password']==md5($pass))
         {
             $_SESSION['uid']=$data['id'];
+            $_SESSION['authenticated']=true;           
             $_SESSION['uname']=$data['name'];
             setcookie('uname', $data['name'], time() + (86400 * 30), "/"); // 86400 = 1 day
             setcookie('uid', $data['id'], time() + (86400 * 30), "/"); // 86400 = 1 day

@@ -53,4 +53,15 @@
         </ul>
       </div>
     </nav>
+    <!-- <?php
+        if (!isset($_SESSION['authenticated']))
+          {
+              //if the value was not set, you redirect the user to your login page
+              header('Location ../index.php');
+              echo  __DIR__;
+              echo "<br>";
+              die("Redirecting to login.php");
+          }
+
+    ?> -->
 

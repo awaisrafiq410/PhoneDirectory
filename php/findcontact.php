@@ -5,7 +5,6 @@
 			$uid = $_SESSION['uid'];
 
 			$result = mysqli_query($con," SELECT contacts.fname, contacts.lname,numbers.mobile,numbers.pid,contacts.cid FROM contacts,numbers where $criteria='$keyword' AND user_id='$uid' AND numbers.cid=contacts.cid ");
-
 			if(!$result || mysqli_num_rows($result)==0)
 				{
 ?>
